@@ -1,0 +1,8 @@
+{
+  "endpoint": "Minio Server Hostname",
+  "port": "Port",
+  "use_ssl": "Use SSL?",
+  "access_key": "Access Key",
+  "secret_key": "Secret Key",
+  "bucket": "Bucket Name"
+}

@@ -1,0 +1,8 @@
+{
+  "endpoint": "Serveur Minio",
+  "port": "Port",
+  "use_ssl": "Utiliser SSL ?",
+  "access_key": "Clé d'accès",
+  "secret_key": "Clé secrète",
+  "bucket": "Nom du bucket"
+}
