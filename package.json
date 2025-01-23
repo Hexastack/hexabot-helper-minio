@@ -2,7 +2,7 @@
   "name": "hexabot-helper-minio",
   "version": "2.2.0",
   "description": "The Minio Hexabot Helper Extension for Hexabot to store for attachment files",
-  "dependencies": {
+  "peerDependencies": {
     "minio": "^8.0.3"
   },
   "author": "Hexastack",
