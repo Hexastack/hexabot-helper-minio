@@ -29,7 +29,7 @@ To configure the MINIO Helper, use the following settings in the Hexabot admin p
 
 ## Environment Setup 
 
-Set your environment variables in the `./docker/.env` Tile. These variables will be used later in docker-compose files during the installation process. Below an example of envrironment variables:
+Set your environment variables in the **./docker/.env** file. These variables will be utilized in the Docker Compose files when you run the project. Below is an example of the required environment variables:
 
 ```bash
 MINIO_CONSOLE_PORT=9001
