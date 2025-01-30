@@ -27,6 +27,18 @@ To configure the MINIO Helper, use the following settings in the Hexabot admin p
 
 ---
 
+## Environment Setup 
+
+Set your environment variables that will be used later in docker-compose files during the installation process. Below an example of 
+envrironment variables:
+
+```bash
+MINIO_CONSOLE_PORT=9001
+MINIO_ROOT_USER=minioadmin
+MINIO_ROOT_PASSWORD=minioadmin
+MINIO_DEFAULT_BUCKET_NAME=hexabot
+```
+
 ## Installation
 
 First, navigate to your Hexabot project directory and make sure the dependencies are installed:
@@ -90,8 +102,8 @@ services:
         restart: true
     entrypoint: >
       /bin/sh -c "
-      /usr/bin/mc config host add --quiet minio http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD}; 
-      /usr/bin/mc mb "minio/${MINIO_DEFAULT_BUCKET_NAME}"
+      /usr/bin/mc alias set minio http://minio:9000/ ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} 
+      && /usr/bin/mc mb --quiet minio/${MINIO_DEFAULT_BUCKET_NAME}
       "
     networks:
       - minio-network
