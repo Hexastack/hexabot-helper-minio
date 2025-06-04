@@ -5,6 +5,10 @@
   "peerDependencies": {
     "minio": "^8.0.3"
   },
+  "scripts": {
+    "release:patch": "npm version patch && git push origin main --tags",
+    "release:minor": "npm version minor && git push origin main --tags"
+  },
   "author": "Hexastack",
   "license": "AGPL-3.0-only"
 }
