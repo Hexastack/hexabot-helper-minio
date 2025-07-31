@@ -125,7 +125,7 @@ export default class MinioStorageHelper
       return this.client.putObject(
         bucket,
         objectName,
-        file.buffer,
+        file.buffer as any,
         metadata.size,
         metadata,
       );
